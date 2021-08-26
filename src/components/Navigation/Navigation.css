@@ -1,9 +1,6 @@
-.links {
+.sign-out {
   display: flex;
   justify-content: flex-end;
-}
-
-.sign-out {
   text-decoration: underline;
   opacity: 1;
   transition: opacity .15s ease-in;

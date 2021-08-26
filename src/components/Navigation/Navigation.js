@@ -3,7 +3,7 @@ import './Navigation.css';
 
 const Navigation = () => {
   return (
-    <nav className='links'>
+    <nav>
       <p className='sign-out'>Sign Out</p>
     </nav>
   );
