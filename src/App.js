@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
-import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Count from './components/Count/Count';
+import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
+import ImageDisplay from './components/ImageDisplay/ImageDisplay';
 import './App.css';
 
 
@@ -11,15 +12,16 @@ class App extends Component {
     super()
     this.state = {
       input: '',
+      imageUrl: '',
     }
   }
 
   onInputChange = (event) => {
-    console.log(event.target.value)
+    this.setState({input: event.target.value})
   }
 
-  onButtonSubmit = () => {
-    console.log('click')
+  onButtonSubmit = (input) => {
+    this.setState({ imageUrl: this.state.input})
 }
 
   render() {
@@ -30,6 +32,7 @@ class App extends Component {
         <Count />
         <ImageLinkForm
           onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
+        <ImageDisplay imageUrl={this.state.imageUrl}/>
       </div>
     );
   }
