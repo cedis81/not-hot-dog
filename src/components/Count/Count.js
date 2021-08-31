@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Count = () => {
+const Count = ( {name, entries, hotdogs} ) => {
   return (
     <div>
-      <p>{`You've submitted X number of images, and Y number of them were hot dogs`}</p>
+      <p>{`${name}, you've submitted ${entries} images, and ${hotdogs} of them were hot dogs`}</p>
     </div>
   );
 }
