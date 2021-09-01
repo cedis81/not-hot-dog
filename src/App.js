@@ -16,8 +16,29 @@ class App extends Component {
       input: '',
       imageUrl: '',
       route: 'signin',
-      isSignedIn: false
+      isSignedIn: false,
+      user: {
+        id: '',
+        name: '',
+        email: '',
+        entries: 0,
+        hotdogs: 0,
+        joined: ''
+      }
     }
+  }
+
+  loadUser = (data) => {
+    this.setState({
+      user: {
+        id: data.id,
+        name: data.name,
+        email: data.email,
+        entries: data.entries,
+        hotdogs: data.hotdogs,
+        joined: data.joined
+      }
+    })
   }
 
   onRouteChange = (route) => {
@@ -38,22 +59,22 @@ class App extends Component {
 }
 
   render() {
-    const { isSignedIn, imageUrl, route } = this.state;
+    const { isSignedIn, imageUrl, route, user } = this.state;
     return (
       <div className="App">
         <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn}/>
         {route === 'home' ?
           <div>
           <Logo />
-          <Count />
+          <Count name={user.name} entries={user.entries} hotdogs={user.hotdogs}/>
           <ImageLinkForm
           onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
           <ImageDisplay imageUrl={imageUrl}/>
           </div>
           :
             route === 'signin' || route === 'signout'
-            ? <SignIn onRouteChange={this.onRouteChange} />
-            : <Register onRouteChange={this.onRouteChange} />
+            ? <SignIn loadUser = {this.loadUser} onRouteChange={this.onRouteChange} />
+            : <Register loadUser = {this.loadUser} onRouteChange={this.onRouteChange} />
       }
       </div>
     );
