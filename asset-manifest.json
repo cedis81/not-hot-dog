@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/not-hot-dog/static/css/main.df5d2986.chunk.css",
+    "main.js": "/not-hot-dog/static/js/main.edf8cf43.chunk.js",
+    "main.js.map": "/not-hot-dog/static/js/main.edf8cf43.chunk.js.map",
+    "runtime-main.js": "/not-hot-dog/static/js/runtime-main.d299a8b2.js",
+    "runtime-main.js.map": "/not-hot-dog/static/js/runtime-main.d299a8b2.js.map",
+    "static/js/2.306e7e09.chunk.js": "/not-hot-dog/static/js/2.306e7e09.chunk.js",
+    "static/js/2.306e7e09.chunk.js.map": "/not-hot-dog/static/js/2.306e7e09.chunk.js.map",
+    "static/js/3.4b37ba41.chunk.js": "/not-hot-dog/static/js/3.4b37ba41.chunk.js",
+    "static/js/3.4b37ba41.chunk.js.map": "/not-hot-dog/static/js/3.4b37ba41.chunk.js.map",
+    "index.html": "/not-hot-dog/index.html",
+    "static/css/main.df5d2986.chunk.css.map": "/not-hot-dog/static/css/main.df5d2986.chunk.css.map",
+    "static/js/2.306e7e09.chunk.js.LICENSE.txt": "/not-hot-dog/static/js/2.306e7e09.chunk.js.LICENSE.txt",
+    "static/media/hotdog.d3b6532f.jpg": "/not-hot-dog/static/media/hotdog.d3b6532f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d299a8b2.js",
+    "static/js/2.306e7e09.chunk.js",
+    "static/css/main.df5d2986.chunk.css",
+    "static/js/main.edf8cf43.chunk.js"
+  ]
+}
