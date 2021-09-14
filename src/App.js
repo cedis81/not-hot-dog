@@ -6,6 +6,8 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import ImageDisplay from './components/ImageDisplay/ImageDisplay';
 import SignIn from './components/Auth/SignIn';
 import Register from './components/Auth/Register';
+
+import apiUrl from './apiConfig';
 import './App.css';
 
 const initialState = {
@@ -57,7 +59,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input});
-    fetch('http://localhost:3000/imageurl', {
+    fetch(apiUrl + '/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -72,7 +74,7 @@ class App extends Component {
     })
     .then(response => {
       if (response) {
-        fetch('http://localhost:3000/image', {
+        fetch(apiUrl + '/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
