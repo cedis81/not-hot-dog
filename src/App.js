@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
-import Logo from './components/Logo/Logo';
 import Count from './components/Count/Count';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import ImageDisplay from './components/ImageDisplay/ImageDisplay';
@@ -102,7 +101,6 @@ class App extends Component {
         <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn}/>
         {route === 'home' ?
           <div>
-          <Logo />
           <Count name={user.name} entries={user.entries} hotdogs={user.hotdogs}/>
           <ImageLinkForm
           onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
