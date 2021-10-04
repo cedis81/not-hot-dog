@@ -3,6 +3,7 @@ import Navigation from './components/Navigation/Navigation';
 import Count from './components/Count/Count';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import ImageDisplay from './components/ImageDisplay/ImageDisplay';
+import SubmitResponse from './components/SubmitResponse/SubmitResponse';
 import SignIn from './components/Auth/SignIn';
 import Register from './components/Auth/Register';
 
@@ -21,7 +22,8 @@ const initialState = {
     entries: 0,
     hotdogs: 0,
     joined: ''
-  }
+  },
+  apiResponse: ''
 }
 
 class App extends Component {
@@ -72,6 +74,14 @@ class App extends Component {
         throw new Error('Received status in 400 or 500 range.')}
     })
     .then(response => {
+      if (response === 'hotdog') {
+        this.setState({apiResponse: 'hotdog'})
+      } else if (response === 'not hotdog') {
+        this.setState({apiResponse: 'nothotdog'})
+      }
+      return response
+    })
+    .then(response => {
       if (response) {
         fetch(apiUrl + '/image', {
           method: 'put',
@@ -95,7 +105,7 @@ class App extends Component {
   }
 
   render() {
-    const { isSignedIn, imageUrl, route, user } = this.state;
+    const { isSignedIn, imageUrl, route, user, apiResponse } = this.state;
     return (
       <div className="App">
         <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn}/>
@@ -105,6 +115,7 @@ class App extends Component {
           <ImageLinkForm
           onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
           <ImageDisplay imageUrl={imageUrl}/>
+          <SubmitResponse apiResponse={apiResponse} />
           </div>
           :
             route === 'signin' || route === 'signout'
