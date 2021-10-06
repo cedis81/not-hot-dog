@@ -7,7 +7,7 @@
 
 - [Background](#background)
 - [Installation](#installation)
-- [Technologies Used](#technologies-used):
+- [Technologies Used](#technologies-used)
 - [Links](#links)
 - [Next](#next)
 
