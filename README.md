@@ -35,7 +35,7 @@ This React app uses the [Clarifai](https://www.clarifai.com/) Predict API with t
 
 Please note the following for the back end repo:
 
-1. You will need to create your own database locally for development. If you're not using Postgres, you will need to change line 13 in server.js to a different client, and then remove comments on lines 15 and 16.
+1. You will need to create your own database locally for development. If you're not using PostgreSQL, you will need to change line 13 in server.js to a different client, and then remove comments on lines 15 and 16.
 2. On development, you will need to comment lines 17 through 20 in server.js. Line 17 will eventually need to be your database URL. I used a free [Heroku](https://www.heroku.com/) page.
 3. In image.js, you will need to use your own [Clarifai](https://www.clarifai.com/) API Key, and there is a free version if you sign up.
 4. In image.js, you can change the criteria for identifying a food as a hotdog. Lines 25-33 contain that logic.
