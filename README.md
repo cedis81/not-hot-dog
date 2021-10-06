@@ -1,70 +1,56 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Not Hotdog
 
-## Available Scripts
+### Contents
 
-In the project directory, you can run:
+---
 
-### `npm start`
+- [Background](#background)
+- [Installation](#installation)
+- [Technologies Used](#technologies-used):
+- [Links](#links)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Background
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This app was inspired by the HBO sitcom [Silicon Valley](https://www.hbo.com/silicon-valley) where a character's investor urged him to build "Shazam...but for food." The result was an app that was able to determine if your photo was of a hot dog. Or not a hot dog. Further background on the story and show can be found [here](https://www.engadget.com/2017-05-15-not-hotdog-app-hbo-silicon-valley.html) from Engadget (there is strong language if you watch the YouTube clips).
 
-### `npm test`
+This React app uses the [Clarifai](https://www.clarifai.com/) Predict API with their food recognition [model](https://www.clarifai.com/models/ai-food-recognition) to create a basic identifier for hot dogs. A user will need to register and sign in to use the app (while the back end uses [bcrypt.js](https://www.npmjs.com/package/bcryptjs) to hash the password, it is not recommended to use real account information). Once signed in, a user can then submit an image URL in the input field and click on the button to see if their image contains a hot dog. The app will keep track of the number of images a registered user has submitted, as well as how many of those images were hot dogs. Demo screenshots below:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Successful hot dog submission](./public/not-hot-dog-screenshot.png)
 
-### `npm run build`
+![Unsuccessful hot dog submission](./public/not-hot-dog-screenshot2.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Fork and clone back end [repository](https://github.com/cedis81/not-hot-dog-backend).
+2. Install dependencies with `npm install`.
+3. Run 'npm start' to run website on local host 3000.
+4. Fork and clone this repository.
+5. Install dependencies with `npm install`.
+6. Run `npm start` to run website on local host.
+7. To publish on Github Pages, push your changes to Github.
+8. Run `npm run build` to deploy.
+9. Go on an interview with Emily Chang at Bloomberg Tech and talk about your new app [Seefood](https://twitter.com/TechAtBloomberg/status/863944535419666432?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E863944535419666432%7Ctwgr%5E%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.engadget.com%2F2017-05-15-not-hotdog-app-hbo-silicon-valley.html). (Just kidding, please don't do this).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Please note the following for the back end repo:
 
-### `npm run eject`
+1. You will need to create your own database locally for development. If you're not using Postgres, you will need to change line 13 in server.js to a different client, and then remove comments on lines 15 and 16.
+2. On development, you will need to comment lines 17 through 20 in server.js. Line 17 will eventually need to be your database URL.
+3. In image.js, you will need to use your own [Clarifai](https://www.clarifai.com/) API Key, and there is a free version if you sign up.
+4. In image.js, you can change the criteria for identifying a food as a hotdog. Lines 25-33 contain that logic.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Technologies Used
+- JavaScript
+- React
+- HTML
+- CSS
+- Git/Github
+- [Clarifai](https://www.clarifai.com/) API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Links
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Live site](https://cedis81.github.io/not-hot-dog/)
+- [Front end Github repo](https://github.com/cedis81/not-hot-dog)
+- [Back end Github repo](https://github.com/cedis81/not-hot-dog-backend)
