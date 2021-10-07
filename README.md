@@ -54,7 +54,6 @@ Please note the following for the back end repo:
 ### Links
 
 - [Live site](https://cedis81.github.io/not-hot-dog/)
-- [Front end Github repo](https://github.com/cedis81/not-hot-dog)
 - [Back end Github repo](https://github.com/cedis81/not-hot-dog-backend)
 
 ### Next
