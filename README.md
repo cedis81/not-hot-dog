@@ -25,7 +25,7 @@ This React app uses the [Clarifai](https://www.clarifai.com/) Predict API with t
 
 1. Fork and clone back end [repository](https://github.com/cedis81/not-hot-dog-backend).
 2. Install dependencies with `npm install`.
-3. Run 'npm start' to run website on local host 3000.
+3. Run `npm start` to run website on local host 3000.
 4. Fork and clone this repository.
 5. Install dependencies with `npm install`.
 6. Run `npm start` to run website on local host.
