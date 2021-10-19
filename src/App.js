@@ -15,6 +15,7 @@ const initialState = {
   imageUrl: '',
   route: 'signin',
   isSignedIn: false,
+  disabled: false,
   user: {
     id: '',
     name: '',
@@ -55,10 +56,16 @@ class App extends Component {
   }
 
   onInputChange = (event) => {
-    this.setState({input: event.target.value});
+    this.setState({
+      input: event.target.value,
+      disabled: false
+    });
   }
 
   onButtonSubmit = () => {
+    if (this.state.disabled) {
+      return
+    }
     this.setState({ imageUrl: this.state.input});
     fetch(apiUrl + '/imageurl', {
       method: 'post',
@@ -68,6 +75,7 @@ class App extends Component {
       })
     })
     .then(response => {
+      this.setState({ disabled: true })
       if (response.ok) {
         return response.json()
       } else {

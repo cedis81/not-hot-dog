@@ -7,7 +7,7 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
       <p>{`This is the image link form`}</p>
       <div className='center'>
         <div className='form center'>
-          <input className='url-form' type='text' onChange={onInputChange}/>
+          <input className='url-form' type='text' onInput={onInputChange}/>
           <button className='submit-button' onClick={onButtonSubmit}>Hot Dog!!</button>
         </div>
       </div>
