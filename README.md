@@ -18,7 +18,7 @@ This app was inspired by the HBO sitcom [Silicon Valley](https://www.hbo.com/sil
 This React app uses the [Clarifai](https://www.clarifai.com/) Predict API with their food recognition [model](https://www.clarifai.com/models/ai-food-recognition) to create a basic identifier for hot dogs. A user will need to register and sign in to use the app (while the back end uses [bcrypt.js](https://www.npmjs.com/package/bcryptjs) to hash the password, it is not recommended to use real account information). Once signed in, a user can then submit an image URL in the input field and click on the button to see if their image contains a hot dog. The app will keep track of the number of images a registered user has submitted, as well as how many of those images were hot dogs. Demo screenshots below:
 
 ![Successful hot dog submission](./public/not-hot-dog-screenshot.png)
-
+<br>  
 ![Unsuccessful hot dog submission](./public/not-hot-dog-screenshot2.png)
 
 ### Installation
