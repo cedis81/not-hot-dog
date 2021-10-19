@@ -59,6 +59,6 @@ Please note the following for the back end repo:
 ### Next
 
 - Providing user feedback on each action's success or failure.
-- Clearing form on submit and preventing multiple submits.
+-~~Clearing form on submit and preventing multiple submits.~~
 - Unit testing.
 - Allow a user to change a password.
