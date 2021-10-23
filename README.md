@@ -18,7 +18,7 @@ This app was inspired by the HBO sitcom [Silicon Valley](https://www.hbo.com/sil
 This React app uses the [Clarifai](https://www.clarifai.com/) Predict API with their food recognition [model](https://www.clarifai.com/models/ai-food-recognition) to create a basic identifier for hot dogs. A user will need to register and sign in to use the app (while the back end uses [bcrypt.js](https://www.npmjs.com/package/bcryptjs) to hash the password, it is not recommended to use real account information). Once signed in, a user can then submit an image URL in the input field and click on the button to see if their image contains a hot dog. The app will keep track of the number of images a registered user has submitted, as well as how many of those images were hot dogs. Demo screenshots below:
 
 ![Successful hot dog submission](./public/not-hot-dog-screenshot.png)
-<br>  
+<br>
 ![Unsuccessful hot dog submission](./public/not-hot-dog-screenshot2.png)
 
 ### Installation
@@ -30,7 +30,7 @@ This React app uses the [Clarifai](https://www.clarifai.com/) Predict API with t
 5. Install dependencies with `npm install`.
 6. Run `npm start` to run website on local host.
 7. To publish on Github Pages, push your changes to Github.
-8. Run `npm run build` to deploy.
+8. Run `npm run deploy` to deploy.
 9. Go on an interview with Emily Chang at Bloomberg Tech and talk about your new app [Seefood](https://twitter.com/TechAtBloomberg/status/863944535419666432?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E863944535419666432%7Ctwgr%5E%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.engadget.com%2F2017-05-15-not-hotdog-app-hbo-silicon-valley.html). (Just kidding, please don't do this).
 
 Please note the following for the back end repo:
